@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Calibri, Helvetica, sans-serif;
+      background-color: pink;
+    }
+    .container {
+      padding: 50px;
+      background-color: lightblue;
+    }
+
+    input[type=text],
+    input[type=password],
+    textarea,
+input[type="date"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 ;
+     
+      border: 1px solid #ccc;
+      border-radius:5px;
+box-sizzing: border-box;
+}
+       input[type="date"] {
+      background-color: #f1f1f1;
+    }
+    input[type=text]:focus,
+    input[type=password]:focus {
+      background-color: grey;
+      outline: none;
+    }
+    div {
+      padding: 10px 0;
+    }
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+    .registerbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    .registerbtn:hover {
+      opacity: 1;
+    }
+label[for="district"] {
+      display: block;
+      margin-top: 10px;
+    }
+    select#district {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-color: white;
+    }
+    select#district:focus {
+      background-color: white;
+      outline: none;
+    }
+.custom-file-upload {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 6px 12px;
+      cursor: pointer;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+    .custom-file-upload:hover {
+      background-color: #ddd;
+    }
+
+    label.checkbox-label {
+      position: relative;
+      padding-left: 25px;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+    label.checkbox-label:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background-color: #fff;
+    }
+    label.checkbox-label:hover:before {
+      border-color: #999;
+    }
+    label.checkbox-label:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    input[type="checkbox"]:checked + label.checkbox-label:after {
+      display: block;
+      left: 6px;
+      top: 6px;
+      width: 6px;
+      height: 6px;
+      background-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  
+    <div class="container">
+   
+       <h1>Registration Form</h1>
+       <form action="Registration" method="post" onsubmit="return handleSubmit()">
+
+
+      <hr>
+      <label>Name:</label>
+      <input type="text" name="Name" placeholder="Name" size="15" required />
+<br>
+      <label>Date of Birth:</label>
+      <input type="date" name="dob" required>
+      <br>
+
+      <div>
+        <label>Gender:</label><br>
+        <input type="radio" value="Male" name="gender" checked> Male
+        <input type="radio" value="Female" name="gender"> Female
+        <input type="radio" value="Other" name="gender"> Other
+      </div>
+ <hr>
+<br>
+      <label>AadharNo:</label>
+      <input type="text" name="AadharNo" placeholder="Aadhar" size="15" required />
+<br>
+<label for="district">District:</label>
+<select id="district" name="district" required>
+<option value="" disabled selected>Select District</option>
+<option value="district1">Ariyalur</option>
+<option value="district2">Chengalpattu</option>
+<option value="district3">Chennai</option>
+<option value="district4">Coimbatore</option>
+<option value="district5">Cuddalore</option>
+<option value="district6"> Dharmapuri   </option>
+  <option value="district7">Dindigul  </option>
+  <option value="district8">Erode </option>
+  <option value="district9">Kallakurichi </option>
+  <option value="district10">Kancheepuram </option>
+  <option value="district11">Karur </option>
+  <option value="district12">Krishnagiri  </option>
+  <option value="district13">Madurai</option>
+  <option value="district14">Mayiladuthurai </option>
+  <option value="district15">Nagapattinam   </option>
+  <option value="district16">Kanyakumari    </option>
+  <option value="district17">Namakkal</option>
+  <option value="district18">Perambalur   </option>
+  <option value="district19"> Pudukottai  </option>
+  <option value="district20">  Ramanathapuram    </option>
+  <option value="district21">Ranipet</option>
+  <option value="district22"> Salem   </option>
+  <option value="district23">Sivagangai</option>
+  <option value="district24"> Tenkasi  </option>
+  <option value="district25"> Thanjavur   </option>
+  <option value="district26">Theni </option>
+  <option value="district27"> Thiruvallur  </option>
+  <option value="district28"> Thiruvarur   </option>
+  <option value="district29"> Thoothukudi  i  </option>
+  <option value="district30">Trichirappalli    </option>
+  <option value="district31">Thirunelveli  </option>
+  <option value="district32">  Tirupathur     </option>
+  <option value="district33"> Tiruppur </option>
+  <option value="district34"> Tiruvannamalai   </option>
+  <option value="district35">  The Nilgiris  </option>
+  <option value="district36">   Vellore       </option>
+  <option value="district37"> Viluppuram    </option>
+  <option value="district38">   Virudhunagar    </option>
+</select>
+<span class="error" id="districtError"></span>
+
+<br><br>
+
+      <label>Phone:</label>
+      <input type="text" name="country_code" placeholder="Country Code" value="+91" size="2" />
+      <input type="text" name="phone" placeholder="Phone no." size="10" required />
+
+      <label>Current Address:</label>
+      <textarea cols="80" rows="5" name="address" placeholder="Current Address" required></textarea>
+<br>
+       <label for="aadharFile">Aadhar Card:</label>
+        <input type="file" id="aadharFile" name="aadharFile" accept=".pdf" required>
+        <span class="error" id="aadharFileError"></span>
+        <br><br>
+        <label for="signatureFile">Signature:</label>
+        <input type="file" id="signatureFile" name="signatureFile" accept=".pdf" required>
+        <span class="error" id="signatureFileError"></span>
+        <br><br>
+
+        <label>Which mode do you prefer?</label>
+<br>
+        <input type="checkbox" id="modePost" name="modePost" value="Post">
+        <label for="modePost">Post</label>
+<br>
+        <input type="checkbox" id="modeWebsite" name="modePost" value="Website">
+        <label for="modeWebsite">Website</label>
+<br>
+        <input type="checkbox" id="modeBoth" name="modePost" value="Both">
+        <label for="modeBoth">Both</label>
+        <br><br>
+
+
+     
+
+      <label>Password:</label>
+      <input type="password" name="password" placeholder="Password" required />
+
+      <label>Re-type password:</label>
+      <input type="password" name="repassword" placeholder="Re-type Password" required />
+
+      <button type="submit" class="registerbtn">Register</button>
+    
+    </form>
+</div>
+  <!-- ... (your existing HTML code) ... -->
+
+<script>
+function handleSubmit() {
+  var name = document.forms["registrationForm"]["Name"].value;
+  var phone = document.forms["registrationForm"]["phone"].value;
+  var district = document.forms["registrationForm"]["district"].value;
+  var aadharNo = document.forms["registrationForm"]["AadharNo"].value;
+
+  // Validate Name: Should not be empty
+  if (name === "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+  // Validate Phone: Should be numeric and have 10 digits
+  if (!/^\d{10}$/.test(phone)) {
+    alert("Invalid phone number (10 digits required)");
+    return false;
+  }
+
+  // Validate Aadhar Number: Should be numeric and have 16 digits
+  if (!/^\d{12}$/.test(aadharNo)) {
+    alert("Invalid Aadhar number (12 digits required)");
+    return false;
+  }
+
+  // Validate District: Should not be the default value
+  if (district === "") {
+    alert("Please select a district");
+    return false;
+  }
+
+  // Simulate a successful registration
+  alert("Registration successful!");
+  return false; // Prevent the form from submitting normally
+}
+</script>
+
+</body>
+</html>

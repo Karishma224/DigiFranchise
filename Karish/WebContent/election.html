@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vote for your favorite candidate</h1>
+       <form action="Voting" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label>Select a candidate:</label>
+            <input type="radio" id="candidate1" name="candidate" value="1" required>
+            <label for="candidate1">Jaanu</label>
+            
+            <input type="radio" id="candidate2" name="candidate" value="2" required>
+            <label for="candidate2">Meera</label>
+            
+            <input type="radio" id="candidate3" name="candidate" value="3" required>
+            <label for="candidate3">Kumar</label>
+            
+            <input type="radio" id="candidate4" name="candidate" value="4" required>
+            <label for="candidate4">Raj</label>
+            
+            <button type="submit">Vote</button>
+        </form>
+    </div>
+</body>
+</html>
